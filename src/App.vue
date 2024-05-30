@@ -15,10 +15,8 @@ export default {
 </script>
 
 <template>
-  <header>
-    <!-- header component -->
-    <HeaderComponent />
-  </header>
+  <!-- header component -->
+  <HeaderComponent />
 
   <main>
     <!-- main component -->
