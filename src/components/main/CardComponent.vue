@@ -2,12 +2,31 @@
 export default{
     name:"card",
     props: ['img'],
+    data(){
+        return {
+            timeout: null
+        }
+    },
     methods:{
-        secondaryImage(event){
-            event.target.childNodes[0].src = `/img/${this.img}b.webp`
+        clearTimeout(){
+            if(this.timeout){
+                clearTimeout(this.timeout)
+            }
         },
-        primaryImage(){
-            event.target.childNodes[0].src = `/img/${this.img}.webp`
+        setImageAfter(event, img, after){
+            this.timeout = setTimeout(() => {
+                event.target.childNodes[0].src = img
+            }, after*1000)
+        },
+        secondaryImage(event){
+            this.clearTimeout()
+            this.setImageAfter(event, `/img/${this.img}b.webp`, 0.1)
+            
+            
+        },
+        primaryImage(event){
+            this.clearTimeout()
+            this.setImageAfter(event, `/img/${this.img}.webp`, 0.1)
         }
     }
 
