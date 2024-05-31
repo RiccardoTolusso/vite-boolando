@@ -1,2 +1,6 @@
 $primary-color: #FF6900;
-$container-width: 80vw;
+$container-width: 50vw;
+
+// GRID VARIABLES
+$col-gap: 10px;
+$col-width: calc(100% / 3 - $col-gap);

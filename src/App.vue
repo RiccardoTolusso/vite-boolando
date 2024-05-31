@@ -1,5 +1,6 @@
 <script>
 import HeaderComponent from './components/header/HeaderComponent.vue';
+import MainComponent from './components/main/MainComponent.vue';
 
 export default {
   name:"MyApp",
@@ -10,6 +11,7 @@ export default {
   },
   components:{
     HeaderComponent,
+    MainComponent,
   }
 }
 </script>
@@ -18,11 +20,7 @@ export default {
   <!-- header component -->
   <HeaderComponent />
 
-  <main>
-    <!-- main component -->
-      <!-- grid component -->
-        <!-- card component -->
-  </main>
+  <MainComponent />
 
   <footer>
     <!-- footer component -->
@@ -30,7 +28,6 @@ export default {
 </template>
 
 <style lang="scss">
-@use "./assets/style/main.scss";
 
 
 </style>

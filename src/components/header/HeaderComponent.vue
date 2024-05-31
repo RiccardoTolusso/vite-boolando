@@ -3,9 +3,6 @@ import NavBarButton from './NavBarButton.vue';
 
 export default {
     name:"Header",
-    data(){
-
-    },
     methods:{
 
     },
