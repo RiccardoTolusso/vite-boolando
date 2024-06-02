@@ -14,7 +14,7 @@ export default{
 
 <template>
 <div class="grid">
-    <CardComponent v-for="product in products" :img="product.img"></CardComponent>
+    <CardComponent v-for="product in products" :product="product"></CardComponent>
 </div>
 </template>
 

@@ -1,33 +1,17 @@
 <script>
 import GridWithCards from './GridWithCards.vue';
-
+import dbData from '../../data/db.json'
 export default{
     data(){
         return {
-            products:[
-                {
-                    img: 1,
-                },
-                {
-                    img: 2,
-                },
-                {
-                    img: 3,
-                },
-                {
-                    img: 4,
-                },
-                {
-                    img: 5,
-                },
-                {
-                    img: 6,
-                },
-            ]
+            products: dbData['products']
         }
     },
     components: {
         GridWithCards,
+    },
+    mounted(){
+        console.log(this.products)
     }
 }
 </script>
