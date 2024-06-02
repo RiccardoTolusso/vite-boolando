@@ -8,13 +8,18 @@ export default{
     },
     props:[
         'products'
-    ]
+    ], 
+    methods:{
+        toggleFavourite(product){
+            product.isInFavorites = !product.isInFavorites
+        }
+    }
 }
 </script>
 
 <template>
 <div class="grid">
-    <CardComponent v-for="product in products" :product="product"></CardComponent>
+    <CardComponent v-for="product in products" :product="product" @click="toggleFavourite(product)"></CardComponent>
 </div>
 </template>
 
